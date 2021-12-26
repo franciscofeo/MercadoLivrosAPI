@@ -20,8 +20,8 @@ class CustomerService {
         return customerRepository.findAll()
     }
 
-    fun createCustomer(customerDTO: CustomerDTO){
-        customerRepository.save(customerDTO.dtoToCustomer())
+    fun createCustomer(customer: Customer){
+        customerRepository.save(customer)
     }
 
     fun getById(id: Long): Customer{
