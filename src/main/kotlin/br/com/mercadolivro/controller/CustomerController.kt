@@ -21,7 +21,7 @@ class CustomerController(
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     fun createCustomer(@RequestBody customerDTO: CustomerDTO){
-        customerService.createCustomer(customerDTO)
+        customerService.createCustomer(customerDTO.dtoToCustomer())
     }
 
     @GetMapping("/search/{id}")
